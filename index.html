@@ -9,15 +9,21 @@
 <body>
     <h1>Calcualdora con Javascript</h1>
 
+    <select name="operacion" id="operacion">
+        <option value="sumar">Sumar</option>
+        <option value="restar">Restar</option>
+    </select>
+
     <p>Introduce el primer numero</p>
     <input type="number" id="numero1">
 
     <p>Introduce el segundo numero</p>
     <input type="number" id="numero2"> <br>
 
-    <button onclick="sumar()">Calcular</button>
+    <button onclick="operar()">Calcular</button>
+    <button onclick="vaciar()">Vacia el resultado</button>
     <p>Resultado:</p>
-    <p id="resultado"></p>
+    <p id="resultado">-</p>
 
     <script src="calculadora.js"></script>
 </body>
