@@ -9,10 +9,13 @@
 <body>
     <h1>Calcualdora con Javascript</h1>
 
-    <select name="operacion" id="operacion">
-        <option value="sumar">Sumar</option>
-        <option value="restar">Restar</option>
-    </select>
+    <fieldset name="operacion" id="operacion">
+        <legend>Operaciones</legend>
+        Sumar<input name="operacion" type="radio" value="sumar"><br>
+        Restar<input name="operacion" type="radio" value="restar"><br>
+        Multiplicar<input name="operacion" type="radio" value="multiplicar"><br>
+        Dividir<input name="operacion" type="radio" value="dividir"><br>
+    </fieldset>
 
     <p>Introduce el primer numero</p>
     <input type="number" id="numero1">

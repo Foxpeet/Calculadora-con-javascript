@@ -1,19 +1,29 @@
 function selected(){ //para dar el valor de la opcion del select que este recogida
-    let selected1 = document.getElementById("operacion")
-    let opcion1 = selected1.options[selected1.selectedIndex].value
+    let opcion1
+    let seleccion = document.getElementsByName("operacion")
+    for(let i=0; i<seleccion.length ; i++){
+        if(seleccion[i].checked){
+            opcion1 = seleccion[i].value;
+        }
+    }
+    // console.log(opcion1)
     return (opcion1)
 }
 function operar(){
     let condicion = selected()
     if(condicion == "sumar"){
         sumar()
-        console.log("He sumado")
+        // console.log("He sumado")
     } else if (condicion == "restar") {
         restar()
-        console.log("He restado")
+        // console.log("He restado")
+    } else if (condicion == "multiplicar") {
+        multiplicar()
+        // console.log("He multiplicado")
+    } else if (condicion == "dividir") {
+        dividir()
+        // console.log("He dividido")
     }
-    
-    
 }
 function sumar(){
     var num1 = document.getElementById("numero1").value
@@ -26,6 +36,20 @@ function restar() {
     var num1 = document.getElementById("numero1").value
     var num2 = document.getElementById("numero2").value
     document.getElementById("resultado").textContent = Math.abs(Number(num1) - Number(num2))
+    return
+}
+
+function multiplicar(){
+    var num1 = document.getElementById("numero1").value
+    var num2 = document.getElementById("numero2").value
+    document.getElementById("resultado").textContent = (Number(num1) * Number(num2))
+    return
+}
+
+function dividir(){
+    var num1 = document.getElementById("numero1").value
+    var num2 = document.getElementById("numero2").value
+    document.getElementById("resultado").textContent = (Number(num1) / Number(num2))
     return
 }
 
